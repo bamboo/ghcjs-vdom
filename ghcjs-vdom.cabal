@@ -51,6 +51,7 @@ library
                        GHCJS.VDOM.Event
                        GHCJS.VDOM.QQ
                        GHCJS.VDOM.Render
+                       GHCJS.VDOM.SVG
                        GHCJS.VDOM.Unsafe
   other-modules:       GHCJS.VDOM.Internal
                        GHCJS.VDOM.Internal.TH

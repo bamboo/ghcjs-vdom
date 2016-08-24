@@ -54,6 +54,7 @@ var isVirtualNode = require('virtual-dom/vnode/is-vnode');
 var isThunk       = require('virtual-dom/vnode/is-thunk');
 var isWidget      = require("virtual-dom/vnode/is-widget");
 var h             = require('virtual-dom/h');
+var hsvg          = require('virtual-dom/virtual-hyperscript/svg');
 var isArray       = require('x-is-array');
 var VPatch        = require("virtual-dom/vnode/vpatch");
 var VText         = require('virtual-dom/vnode/vtext');
@@ -412,6 +413,10 @@ function v(tag, props, children) {
   return h(tag, props, children);
 }
 
+function s(tag, props, children) {
+  return hsvg(tag, props, children);
+}
+
 function t(text) {
   return new VText(text);
 }
@@ -445,6 +450,7 @@ module.exports = { setThunkPatch: setThunkPatch
                  , th:            th
                  , t:             t
                  , c:             c
+                 , s:             s
                  , makeHandler:   makeHandler
                  };
 
